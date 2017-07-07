@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    long int t,a,b,counti;
+    cin>>t;
+    while(t--)
+    {
+        a=b=counti=0;
+        cin>>a>>b;
+        if(a>b)
+        {
+          if(a%2==0)
+          {
+            while(a!=b)
+            {
+               a=a/2;
+               counti++;
+            }
+          }
+          else
+          {
+            a=(a-1)/2;
+            counti++;
+            while(a!=b)
+            {
+                a=a/2;
+                counti++;
+            }
+          }
+        }
+        if(a<b)
+        {
+          if(a%2==0)
+          {
+            while(a!=b)
+            {
+                a=a*2;
+                counti++;
+            }
+          }
+          else
+          {
+            if(a!=1)
+            {
+             a=(a-1)/2;
+             counti++;
+            }
+            while(a!=b)
+            {
+                a=a*2;
+                counti++;
+            }
+          }
+        }
+    cout<<counti<<endl;
+    }
+  return 0;
+}
+
